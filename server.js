@@ -14,7 +14,7 @@ const app = express();
 const Product = require('./api/product/product.model');
 
 // connecting to database
-mongoose.connect('mongodb://localhost/Product-Demo');
+mongoose.connect('mongodb://admin:12345678@ds121889.mlab.com:21889/product-demo');
 mongoose.connection.on('error', function (err) {
     console.error('MongoDB connection error: ' + err);
     process.exit(-1);
