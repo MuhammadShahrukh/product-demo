@@ -19,10 +19,10 @@ https://product-demo-test.herokuapp.com/products
  https://product-demo-test.herokuapp.com/api/product/<br/>
 
 * List product by its id (GET)<br/>
-  https://product-demo-test.herokuapp.com/api/<productId><br/>
+  https://product-demo-test.herokuapp.com/api/productId<br/>
 
 * Update product by its id (PUT)<br/>
-  https://product-demo-test.herokuapp.com/api/<productId><br/>
+  https://product-demo-test.herokuapp.com/api/productId<br/>
 
 * Delete product by its id (DELETE)<br/>
-  https://product-demo-test.herokuapp.com/api/<productId><br/>
+  https://product-demo-test.herokuapp.com/api/productId<br/>
