@@ -10,19 +10,19 @@ Run `npm start` to run the project in development mode
 https://product-demo-test.herokuapp.com/products
 
 
-## API (https://product-demo-test.herokuapp.com/api)
+## APIs
 
 * List all Products (GET)<br/>
-  /product/<br/>
+  https://product-demo-test.herokuapp.com/api/product/<br/>
 
 * Create new product (POST)<br/>
- /product/<br/>
+ https://product-demo-test.herokuapp.com/api/product/<br/>
 
 * List product by its id (GET)<br/>
-  /<productId><br/>
+  https://product-demo-test.herokuapp.com/api/<productId><br/>
 
 * Update product by its id (PUT)<br/>
-  /<productId><br/>
+  https://product-demo-test.herokuapp.com/api/<productId><br/>
 
 * Delete product by its id (DELETE)<br/>
-  /<productId><br/>
+  https://product-demo-test.herokuapp.com/api/<productId><br/>
