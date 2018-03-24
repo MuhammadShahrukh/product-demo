@@ -1,18 +1,23 @@
 {
-  "name": "product-demo",
-  "version": "1.0.0",
-  "description": "this is a demo project",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "npm start": "node server"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.0.11",
-    "papaparse": "^4.3.7"
-  }
+    "name": "product-demo",
+    "version": "1.0.0",
+    "description": "this is a demo project",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "npm start": "node server"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "cors": "^2.8.4",
+        "express": "^4.16.3",
+        "mongoose": "^5.0.11",
+        "papaparse": "^4.3.7"
+    },
+    "engines": {
+        "node" : "8.9.4",
+        "npm" : "5.7.1"
+    }
 }

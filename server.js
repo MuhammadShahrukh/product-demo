@@ -6,6 +6,7 @@ const PORT = 4000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const papaParse = require('papaparse');
+const cors = require('cors');
 
 const express = require('express');
 const app = express();
@@ -19,16 +20,17 @@ mongoose.connection.on('error', function (err) {
     process.exit(-1);
 });
 
+app.use(express.static( __dirname+ '/client' ));
+
 // initializing body parser
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors())
+
+
 
 require('./routes')(app);
 
-app.route('/*')
-    .get(function (req, res) {
-        res.sendFile(path.resolve(__dirname + '/client/index.html'));
-    });
 
 // this method will create product mock data into our database
 async function createDatabase() {
@@ -68,6 +70,10 @@ async function createDatabase() {
 }
 
 createDatabase()
+
+app.get('*', (req, res) => {
+    res.sendFile( __dirname + '/client/dist/index.html');
+});
 
 app.listen(PORT, () => {
     console.log('Server listening on PORT : ' + PORT);

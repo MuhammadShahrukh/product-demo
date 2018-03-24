@@ -5,7 +5,14 @@ const Product = require('./product.model');
 exports.fetchAll = async function(req,res){
     try{
 
-        let products = await Product.find({});
+        let query = {};
+        if( req.query['productName'] ){
+            query['name'] = {
+                '$regex' : ".*"+req.query.productName+".*"
+            }
+        }
+
+        let products = await Product.find(query).limit(12);
 
         res.json(products);
 
