@@ -2,7 +2,7 @@
 
 const path = require('path');
 const fs = require('fs');
-const PORT = 4000;
+const PORT = process.env.PORT ||4000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const papaParse = require('papaparse');
